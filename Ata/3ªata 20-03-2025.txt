@@ -7,10 +7,7 @@ Presenças:
 Todos Presentes
 
 
-Foi realizada uma reunião inicial com o formador Rui Boticas no ambito de definir objetivos para o dia.
-
-
-
+Continuação e conclusão da reunião do ultimo dia para debater, votar e finalizar os Levantamento de Requisitos Funcionais e não Funcionais.
 
 
 
@@ -19,4 +16,4 @@ Foi realizada uma reunião inicial com o formador Rui Boticas no ambito de defini
 
 
 PROXIMA REUNIÃO:
-de Março de 2025 - 14H00 na sala da Formação
+25 de Março de 2025 - 09H00 na sala da Formação
