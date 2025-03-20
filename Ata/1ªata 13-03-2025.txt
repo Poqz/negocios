@@ -1,0 +1,39 @@
+ATA
+
+Data : 13/03/2025
+Hora : 14H00
+
+Presenças:
+Todos Presentes
+
+Foi realizada uma reunião inicial com o formador Rui Boticas no ambito de definir objetivos para o dia.
+
+Após a reunião com o formador Rui Boticas foi realizada uma segunda reunião em mesa com todos os elementos para definir e formalizar o Problema. A reunião decorreu de uma forma mais organizada e focada. 
+
+Em outro momento de Reunião em mesa, com todos os elementos, foi debatido certos elementos dos Âmbitos do Projeto que anteriormente eram motivos de debate, foram também identificados novos nesta reunião, posteriormente foram definidos e votados os seguintes tópicos relativos ao Âmbito do Projeto: 
+- Votação na Publicação 1 - APROVADO
+- Feedback da Publicação 1 - APROVADO
+- Radar - APROVADO
+- Parceiros / Filtrar lojas de users - NEGADO
+- Watchlist - APROVADO
+- Reputação / Karma - APROVADO
+- Timer da Promoção 2 - APROVADO
+- Promoções serem fidedignas - NEGADO
+- Local da Promoção - APROVADO
+- Filtragem da Promoção - APROVADO
+- Moderação - APROVADO
+- Promoções serem atualizadas 2 - APROVADO
+-Fotografias - APROVADO
+ Opcional
+ O que deve conter
+- Físico - APROVADO
+ Sem restrição geográfica 
+
+NOTA: 1 – Relacionado
+      2 – Relacionado
+
+Após a 2ª Reunião em mesa todos os elementos fizeram um levantamento de requisitos a nível individual, onde posteriormente se reuni-o e debateu-se sobre o tema em mesa.
+
+
+PROXIMA REUNIÃO:
+13 de Março de 2025 - 14H00 na sala da Formação
