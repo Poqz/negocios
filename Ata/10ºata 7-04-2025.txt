@@ -1,0 +1,41 @@
+10º ATA
+
+Data : 07/04/2025
+Hora : 09H00
+
+Presenças:
+Todos presentes
+
+
+Reunião em mesa com o formador com todos os elementos
+
+
+
+Distribuição de equipas de trabalho para criação de Diagramas de Micro-Serviços
+
+
+
+Equipas:
+
+NOTA: TL = Team Leader
+
+1 - Luis(TL) / Leonel - Autenticação	
+
+2 - Pedro / Ricardo / Tiago(TL) - Publicação
+
+3 - Pablo(TL) / Hugo - Notificação 
+
+4 - Diogo Castilho(TL) / Joao - Denuncia
+
+5 - Guilherme / Diogo Lourenço(TL) / Bruno - Perfil 
+
+
+Reunião em mesa com o Project Manager e os Team Leaders para debater questões pertinentes do Projeto
+
+
+Continuação do trabalho em equipas com foco nos Micro-Serviços
+
+
+
+PROXIMA REUNIÃO:
+10 de Abril de 2025 - 09H00 na sala da Formação
