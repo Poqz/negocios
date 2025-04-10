@@ -1,5 +1,6 @@
 package com.negocios.denuncias.models;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Denuncia {
@@ -7,8 +8,16 @@ public class Denuncia {
     private String descricao;
     private int denunciador_ID;
     private int denunciado_ID;
-    private Date data;
+    private LocalDateTime data;
     private int tipoDenunciaId;
+
+    public Denuncia(String descricao, int denunciador_ID, int denunciado_ID, int tipoDenunciaId) {
+        this.descricao = descricao;
+        this.denunciador_ID = denunciador_ID;
+        this.denunciado_ID = denunciado_ID;
+        this.data = LocalDateTime.now();
+        this.tipoDenunciaId = tipoDenunciaId;
+    }
 
     public int getId() {
         return id;
@@ -42,11 +51,11 @@ public class Denuncia {
         this.denunciado_ID = denunciado_ID;
     }
 
-    public Date getData() {
+    public LocalDateTime getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDateTime data) {
         this.data = data;
     }
 
