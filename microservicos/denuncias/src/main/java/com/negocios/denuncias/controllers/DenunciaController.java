@@ -2,6 +2,7 @@ package com.negocios.denuncias.controllers;
 
 import com.negocios.denuncias.models.Denuncia;
 import com.negocios.denuncias.managers.DenunciaManager;
+import org.springframework.boot.SpringApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +19,7 @@ public class DenunciaController {
     public ArrayList<Denuncia> getAll() {
         Denuncia d = new Denuncia("Portou-se mal", 1, 2,  2);
         denunciaManager.addDenuncia(d);
+
         return denunciaManager.getAllDenuncias();
     }
 
