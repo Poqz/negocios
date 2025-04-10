@@ -11,7 +11,6 @@ import java.sql.SQLException;
 public class DbMySQL {
 
 
-    private Connection conn;
     private static final String MYSQL_DRIVER = "com.mysql.jdbc.Driver";
     private static final String DB_NAME = "efa0124_ms_denuncia";
     private static final String SERVER = "62.28.39.135";
@@ -24,8 +23,7 @@ public class DbMySQL {
     private Connection getConn() throws SQLException, ClassNotFoundException {
         try {
             Class.forName(MYSQL_DRIVER);
-            this.conn = DriverManager.getConnection(URL, USER, PASSWORD);
-            return this.conn;
+            return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (ClassNotFoundException e) {
             throw new SQLException(e.getMessage());
         }
