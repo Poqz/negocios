@@ -8,14 +8,18 @@ public class Denuncia {
     private String descricao;
     private int denunciadorId;
     private int denunciadoId;
-    private LocalDateTime data;
+    private Date data;
     private int tipoDenunciaId;
+
+    public Denuncia() {
+    }
 
     public Denuncia(String descricao, int denunciadorId, int denunciadoId, int tipoDenunciaId) {
         this.descricao = descricao;
         this.denunciadorId = denunciadorId;
         this.denunciadoId = denunciadoId;
-        this.data = LocalDateTime.now();
+        // TODO: fix this? System.currentTimeMillis()
+        this.data = new Date();
         this.tipoDenunciaId = tipoDenunciaId;
     }
 
@@ -51,11 +55,11 @@ public class Denuncia {
         this.denunciadoId = denunciadoId;
     }
 
-    public LocalDateTime getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(LocalDateTime data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
