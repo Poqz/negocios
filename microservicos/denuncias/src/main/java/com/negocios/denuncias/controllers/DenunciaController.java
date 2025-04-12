@@ -17,18 +17,29 @@ public class DenunciaController {
 
     @GetMapping("/denuncias/getAll")
     public ArrayList<Denuncia> getAll() {
-        Denuncia d = new Denuncia("Portou-se mal", 1, 2,  2);
-        denunciaManager.addDenuncia(d);
-
         return denunciaManager.getAllDenuncias();
     }
 
+    @GetMapping("/denuncias/getDenuncia")
+    public Denuncia getDenuncia(@RequestBody int id) {
+        return denunciaManager.getDenuncia(id);
+    }
 
-    @PostMapping
+    @PostMapping("/denuncias/addDenuncia")
     public boolean addDenuncia(@RequestBody Denuncia d) {
         denunciaManager.addDenuncia(d);
         return true;
     }
 
+    @PostMapping("/denuncias/editDenuncia")
+    public boolean editDenuncia(@RequestBody Denuncia d) {
+        denunciaManager.editDenuncia(d);
+        return true;
+    }
 
+    @PostMapping("/denuncias/deleteDenuncia")
+    public boolean deleteDenuncia(@RequestBody int id) {
+        denunciaManager.deleteDenuncia(id);
+        return true;
+    }
 }
