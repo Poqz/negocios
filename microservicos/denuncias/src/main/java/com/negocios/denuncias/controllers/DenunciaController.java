@@ -3,10 +3,7 @@ package com.negocios.denuncias.controllers;
 import com.negocios.denuncias.models.Denuncia;
 import com.negocios.denuncias.managers.DenunciaManager;
 import org.springframework.boot.SpringApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -20,25 +17,25 @@ public class DenunciaController {
         return denunciaManager.getAllDenuncias();
     }
 
-    @GetMapping("/denuncias/getDenuncia")
-    public Denuncia getDenuncia(@RequestBody int id) {
+    @GetMapping("/denuncias/getDenuncia/{id}")
+    public Denuncia getDenuncia(@PathVariable int id) {
         return denunciaManager.getDenuncia(id);
     }
 
-    @PostMapping("/denuncias/addDenuncia")
-    public boolean addDenuncia(@RequestBody Denuncia d) {
+    @PostMapping("/denuncias/addDenuncia/{d}")
+    public boolean addDenuncia(@PathVariable Denuncia d) {
         denunciaManager.addDenuncia(d);
         return true;
     }
 
     @PostMapping("/denuncias/editDenuncia")
-    public boolean editDenuncia(@RequestBody Denuncia d) {
+    public boolean editDenuncia(@PathVariable Denuncia d) {
         denunciaManager.editDenuncia(d);
         return true;
     }
 
-    @PostMapping("/denuncias/deleteDenuncia")
-    public boolean deleteDenuncia(@RequestBody int id) {
+    @PostMapping("/denuncias/deleteDenuncia/{id}")
+    public boolean deleteDenuncia(@PathVariable int id) {
         denunciaManager.deleteDenuncia(id);
         return true;
     }

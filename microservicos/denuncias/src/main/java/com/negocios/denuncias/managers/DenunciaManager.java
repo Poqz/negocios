@@ -56,7 +56,7 @@ public class DenunciaManager {
                                             "denunciador_id=?, " +
                                             "denunciado_id=?, " +
                                             "tipo_denuncia_id=? " +
-                                        "WHERE id=?";
+                        "WHERE id=?";
         try {
             pst = conn.prepareStatement(query);
             pst.setString(1, d.getDescricao());
@@ -94,8 +94,8 @@ public class DenunciaManager {
         try {
             pst = conn.prepareStatement(query);
             pst.setInt(1, id);
-            rs = pst.executeQuery(query);
-            while (rs.next()) {
+            rs = pst.executeQuery();
+            if (rs.next()) {
                 Denuncia d = new Denuncia();
                 d.setId(rs.getInt("id"));
                 d.setDescricao(rs.getString("descricao"));
@@ -103,7 +103,7 @@ public class DenunciaManager {
                 d.setDenunciadoId(rs.getInt("denunciado_id"));
                 d.setData(rs.getDate("data"));
                 d.setTipoDenunciaId(rs.getInt("tipo_denuncia_id"));
-                denuncias.add(d);
+                return d;
             }
         } catch (SQLException e) {
             e.printStackTrace();
