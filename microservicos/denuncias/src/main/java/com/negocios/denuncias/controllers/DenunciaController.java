@@ -9,11 +9,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 @RestController
+@RequestMapping("/denuncias")
 public class DenunciaController {
 
     private DenunciaManager denunciaManager = new DenunciaManager();
 
-    @GetMapping("/denuncias/getAll")
+    @GetMapping("/getAll")
     public ArrayList<Denuncia> getAll() throws SQLException {
         try {
             return denunciaManager.getAllDenuncias();
@@ -23,8 +24,8 @@ public class DenunciaController {
         }
     }
 
-    @GetMapping("/denuncias/getDenuncia/{id}")
-    public Denuncia getDenuncia(@PathVariable int id) {
+    @GetMapping("/getDenuncia/{id}")
+    public Denuncia getDenuncia(@PathVariable (name="id") int id) {
         try {
         return denunciaManager.getDenuncia(id);
         } catch (SQLException e) {
@@ -33,8 +34,8 @@ public class DenunciaController {
         }
     }
 
-    @PostMapping("/denuncias/addDenuncia/{d}")
-    public boolean addDenuncia(@PathVariable Denuncia d) {
+    @PostMapping("/addDenuncia/{d}")
+    public boolean addDenuncia(@RequestBody Denuncia d) {
         try {
             denunciaManager.addDenuncia(d);
             return true;
@@ -44,8 +45,8 @@ public class DenunciaController {
         }
     }
 
-    @PostMapping("/denuncias/editDenuncia")
-    public boolean editDenuncia(@RequestBody Denuncia d) throws SQLException {
+    @PutMapping("/editDenuncia/{d}")
+    public boolean editDenuncia(@RequestBody Denuncia d, @PathVariable(name = "id") int id) throws SQLException {
         try {
             denunciaManager.editDenuncia(d);
             return true;
@@ -55,8 +56,8 @@ public class DenunciaController {
         }
     }
 
-    @PostMapping("/denuncias/deleteDenuncia/{id}")
-    public boolean deleteDenuncia(@PathVariable int id) {
+    @DeleteMapping("/denuncias/deleteDenuncia/{id}")
+    public boolean deleteDenuncia(@PathVariable (name = "id") int id) {
         try {
             denunciaManager.deleteDenuncia(id);
             return true;

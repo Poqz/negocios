@@ -10,10 +10,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 @RestController
+@RequestMapping("/tipoDenuncias")
 public class TipoDenunciaController {
     private TipoDenunciaManager tipoDenunciaManager = new TipoDenunciaManager();
 
-    @GetMapping("/tipoDenuncias/getAll")
+    @GetMapping("/getAll")
     public ArrayList<TipoDenuncia> getAllTipoDenuncias() {
         try {
             return tipoDenunciaManager.getAllTipoDenuncias();
@@ -23,7 +24,7 @@ public class TipoDenunciaController {
         }
     }
 
-    @GetMapping("/tipoDenuncias/getTipoDenuncia/{id}")
+    @GetMapping("/getTipoDenuncia/{id}")
     public TipoDenuncia getTipoDenuncia(@PathVariable int id) {
         try {
             return tipoDenunciaManager.getDenuncia(id);
@@ -33,7 +34,7 @@ public class TipoDenunciaController {
         }
     }
 
-    @PostMapping("/tipoDenuncias/editTipoDenuncia/{td}")
+    @PostMapping("/editTipoDenuncia/{td}")
     public boolean editTipoDenuncia(@RequestBody TipoDenuncia td) {
         try {
             tipoDenunciaManager.editTipoDenuncia(td);
@@ -44,7 +45,7 @@ public class TipoDenunciaController {
         }
     }
 
-    @PostMapping("/tipoDenuncias/addTipoDenuncia/{td}")
+    @PostMapping("/addTipoDenuncia/{td}")
     public boolean addTipoDenuncia(@PathVariable TipoDenuncia td) {
         try {
             tipoDenunciaManager.addTipoDenuncia(td);
@@ -56,7 +57,7 @@ public class TipoDenunciaController {
     }
 
 
-    @PostMapping("/tipoDenuncias/deleteTipoDenuncia/{id}")
+    @PostMapping("/deleteTipoDenuncia/{id}")
     public boolean addTipoDenuncia(@PathVariable int id) {
         try {
             tipoDenunciaManager.deleteTipoDenuncia(id);
@@ -66,5 +67,4 @@ public class TipoDenunciaController {
             return false;
         }
     }
-
 }

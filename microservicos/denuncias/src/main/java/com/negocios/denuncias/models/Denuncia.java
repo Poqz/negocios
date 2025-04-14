@@ -11,6 +11,7 @@ public class Denuncia {
     private Date data;
     private int tipoDenunciaId;
 
+
     public Denuncia() {
     }
 
