@@ -1,9 +1,12 @@
 package com.negocios.denuncias.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Denuncia {
+    @JsonProperty()
     private int id;
     private String descricao;
     private int denunciadorId;

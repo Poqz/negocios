@@ -28,7 +28,8 @@ DROP TABLE IF EXISTS `efa0124_ms_denuncia`.`tipo_denuncia` ;
 CREATE TABLE IF NOT EXISTS `efa0124_ms_denuncia`.`tipo_denuncia` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`))
+  `is_active` TINYINT DEFAULT 1,
+PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -83,7 +84,6 @@ INSERT INTO `denuncia` (`descricao`, `denunciador_id`, `denunciado_id`, `data`, 
 ('Utilização de bot para automação não permitida', 202, 154, '2025-04-02 08:40:11', 8, 1),
 ('Perfil com múltiplas violações de diretrizes', 132, 287, '2025-04-05 17:30:48', 1, 1),
 ('Publicação promovendo atividade ilícita', 167, 309, '2025-04-10 12:55:27', 4, 0);
-
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

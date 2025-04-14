@@ -45,8 +45,8 @@ public class TipoDenunciaController {
         }
     }
 
-    @PostMapping("/addTipoDenuncia/{td}")
-    public boolean addTipoDenuncia(@PathVariable TipoDenuncia td) {
+    @PostMapping("/addTipoDenuncia")
+    public boolean addTipoDenuncia(@RequestBody TipoDenuncia td) {
         try {
             tipoDenunciaManager.addTipoDenuncia(td);
             return true;
@@ -57,8 +57,8 @@ public class TipoDenunciaController {
     }
 
 
-    @PostMapping("/deleteTipoDenuncia/{id}")
-    public boolean addTipoDenuncia(@PathVariable int id) {
+    @DeleteMapping("/deleteTipoDenuncia/{id}")
+    public boolean DeleteTipoDenuncia(@PathVariable int id) {
         try {
             tipoDenunciaManager.deleteTipoDenuncia(id);
             return true;
