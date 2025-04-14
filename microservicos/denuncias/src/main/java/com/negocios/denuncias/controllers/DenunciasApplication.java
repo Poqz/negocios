@@ -1,4 +1,4 @@
-package com.negocios.denuncias;
+package com.negocios.denuncias.controllers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

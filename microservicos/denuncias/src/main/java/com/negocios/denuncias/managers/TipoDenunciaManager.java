@@ -12,10 +12,11 @@ import java.util.ArrayList;
 
 public class TipoDenunciaManager {
 
+    private ArrayList<TipoDenuncia> tipoDenuncias = new ArrayList<TipoDenuncia>();
+
     private Connection conn = null;
     private PreparedStatement pst = null;
     private ResultSet rs = null;
-    private ArrayList<TipoDenuncia> tipoDenuncias = new ArrayList<TipoDenuncia>();
 
     public TipoDenunciaManager() {
         try {
@@ -41,20 +42,17 @@ public class TipoDenunciaManager {
     /**
      * Método para buscar todas os tipos de denuncias na base de dados
      */
-    public ArrayList<TipoDenuncia> getAllTipoDenuncias() {
+    public ArrayList<TipoDenuncia> getAllTipoDenuncias() throws SQLException {
         String query = "SELECT * FROM tipo_denuncia";
 
-        try {
-            pst = conn.prepareStatement(query);
-            rs = pst.executeQuery(query);
-            while (rs.next()) {
-                TipoDenuncia td = new TipoDenuncia();
-                td.setId(rs.getInt("id"));
-                td.setDescricao(rs.getString("descricao"));
-                tipoDenuncias.add(td);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        tipoDenuncias.clear();
+        pst = conn.prepareStatement(query);
+        rs = pst.executeQuery();
+        while (rs.next()) {
+            TipoDenuncia td = new TipoDenuncia();
+            td.setId(rs.getInt("id"));
+            td.setDescricao(rs.getString("descricao"));
+            tipoDenuncias.add(td);
         }
         return tipoDenuncias;
     }
