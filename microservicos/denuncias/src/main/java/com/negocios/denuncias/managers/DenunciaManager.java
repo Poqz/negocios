@@ -78,24 +78,20 @@ public class DenunciaManager {
      * Método para buscar uma Denuncia a base de dados
      * @param id Id da denuncia a ir buscar.
      */
-    public Denuncia getDenuncia(int id) {
+    public Denuncia getDenuncia(int id) throws SQLException {
         String query = "SELECT * FROM denuncia WHERE id=?";
-        try {
-            pst = conn.prepareStatement(query);
-            pst.setInt(1, id);
-            rs = pst.executeQuery();
-            if (rs.next()) {
-                Denuncia d = new Denuncia();
-                d.setId(rs.getInt("id"));
-                d.setDescricao(rs.getString("descricao"));
-                d.setDenunciadorId(rs.getInt("denunciador_id"));
-                d.setDenunciadoId(rs.getInt("denunciado_id"));
-                d.setData(rs.getDate("data"));
-                d.setTipoDenunciaId(rs.getInt("tipo_denuncia_id"));
-                return d;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        pst = conn.prepareStatement(query);
+        pst.setInt(1, id);
+        rs = pst.executeQuery();
+        if (rs.next()) {
+            Denuncia d = new Denuncia();
+            d.setId(rs.getInt("id"));
+            d.setDescricao(rs.getString("descricao"));
+            d.setDenunciadorId(rs.getInt("denunciador_id"));
+            d.setDenunciadoId(rs.getInt("denunciado_id"));
+            d.setData(rs.getDate("data"));
+            d.setTipoDenunciaId(rs.getInt("tipo_denuncia_id"));
+            return d;
         }
         return null;
     }

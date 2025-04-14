@@ -25,7 +25,12 @@ public class DenunciaController {
 
     @GetMapping("/denuncias/getDenuncia/{id}")
     public Denuncia getDenuncia(@PathVariable int id) {
+        try {
         return denunciaManager.getDenuncia(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @PostMapping("/denuncias/addDenuncia/{d}")
