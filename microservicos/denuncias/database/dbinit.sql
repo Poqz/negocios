@@ -27,7 +27,7 @@ USE `efa0124_ms_denuncia` ;
 DROP TABLE IF EXISTS `efa0124_ms_denuncia`.`tipo_denuncia` ;
 
 CREATE TABLE IF NOT EXISTS `efa0124_ms_denuncia`.`tipo_denuncia` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -41,11 +41,11 @@ COLLATE = utf8mb4_0900_ai_ci;
 DROP TABLE IF EXISTS `efa0124_ms_denuncia`.`denuncia` ;
 
 CREATE TABLE IF NOT EXISTS `efa0124_ms_denuncia`.`denuncia` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(45) NOT NULL,
   `denunciador_id` INT NOT NULL,
   `denunciado_id` INT NULL DEFAULT NULL,
-  `data` DATETIME NULL DEFAULT NULL,
+  `data` DATETIME NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `tipo_denuncia_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_denuncia_tipo_denuncia_idx` (`tipo_denuncia_id` ASC) VISIBLE,
