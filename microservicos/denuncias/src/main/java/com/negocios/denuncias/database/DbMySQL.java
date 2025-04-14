@@ -1,8 +1,5 @@
 package com.negocios.denuncias.database;
 
-
-import com.negocios.denuncias.controllers.DenunciaController;
-
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
