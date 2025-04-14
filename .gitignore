@@ -2,3 +2,4 @@
 *.bak*
 *.lck*
 *.vpp-journal*
+/microservicos/denuncias/.idea
